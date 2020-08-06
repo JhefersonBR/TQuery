@@ -1,5 +1,7 @@
 {
     "name": "jheferson-br/tquery",
+    "description": "Lib em PHP para execução de arquivos SQL. Uso restrito para projetos Adianti",
+    "type": "project",
     "license": "mit",
     "autoload": {
         "psr-4": {
