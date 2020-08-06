@@ -6,6 +6,12 @@ A classe TQuery builder foi desenvolvida para trazer para o Adianti framework um
 Com ela é possível executar arquivos **'.sql'** sendo possível separar as instruções SQL do código PHP.
 
 Com isso temos uma melhor legibilidade do código SQL.
+## Instalação
+
+Como se trata de um pacote composer, basta usar o comando:
+```shell
+ composer require 'jheferson-br/txtfile'
+```
 
 ## Exemplo de Uso
 
