@@ -1,5 +1,4 @@
 <?php
-
 require_once  __DIR__.'/../../../../lib/adianti/core/AdiantiCoreLoader.php';
 spl_autoload_register(array('Adianti\Core\AdiantiCoreLoader', 'autoload'));
 
