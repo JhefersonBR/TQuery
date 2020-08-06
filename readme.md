@@ -10,7 +10,7 @@ Com isso temos uma melhor legibilidade do código SQL.
 
 Como se trata de um pacote composer, basta usar o comando:
 ```shell
- composer require 'jheferson-br/txtfile'
+ composer require 'jheferson-br/tquery'
 ```
 
 ## Exemplo de Uso
@@ -118,7 +118,7 @@ print_r($rows);
 Note que a **TQuery** se comporta de forma semelhante a **TRepository**
 
 Tambem é possível passar parâmetros para as querys usando mineomonicos customizados.
-Isso pode ser útil quando querendo enviar um trecho de código SQL para o TQueyr incluir na query.
+Isso pode ser útil quando queremos enviar um trecho de código SQL para o TQuery incluir na query.
 
 Veja:
 ```sql
