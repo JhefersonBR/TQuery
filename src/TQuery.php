@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../../lib/adianti/core/AdiantiCoreLoader.php';
+require_once  __DIR__.'/../../../../lib/adianti/core/AdiantiCoreLoader.php';
 spl_autoload_register(array('Adianti\Core\AdiantiCoreLoader', 'autoload'));
 Adianti\Core\AdiantiCoreLoader::loadClassMap();
 
@@ -11,7 +11,7 @@ class TQuery
 {
     private $query_name;
     private $criteria;
-    private $base_path_query = "app/querys/";
+    private $base_path_querys = "app/querys/";
     private $query_separator;
     private $pdo;
     private $querys;
@@ -32,6 +32,10 @@ class TQuery
         $this->pdo = TTransaction::get();
         $this->obj_expected = $obj;
         $this->params = $params;
+    }
+
+    public function setBasePathQuerys(string $base_path_querys){
+        $this->base_path_querys = $base_path_querys;
     }
 
     public function setMultiQuerySeparator($separator = ";")
