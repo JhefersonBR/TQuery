@@ -1,7 +1,7 @@
 # TQuery
 ## Sobre o Componente
 
-A classe TQuery builder foi desenvolvida para trazer para o Adianti framework uma abordagem diferente na montagem e execução das querys.
+A classe TQuery foi desenvolvida para trazer para o Adianti framework uma abordagem diferente na montagem e execução das querys.
 
 Com ela é possível executar arquivos **'.sql'** sendo possível separar as instruções SQL do código PHP.
 
@@ -15,7 +15,7 @@ Como se trata de um pacote composer, basta usar o comando:
 
 ## Exemplo de Uso
 
-Para entendermos melhor como a classe funciona, este exemplo simples.
+Para entendermos melhor como a classe funciona, veja este exemplo simples.
 
 Suponhamos que precisamos executar a seguinte instrução no banco de dados para limpar as tabelas do sistema:
 ```sql
