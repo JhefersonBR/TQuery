@@ -30,7 +30,6 @@ class TQuery
         $this->pdo = TTransaction::get();
         $this->obj_expected = $obj;
         $this->params = $params;
-        //$this->base_path_querys = __DIR__.'/../../../../'."app/querys/";
     }
 
     public function setBasePathQuerys(string $base_path_querys){
