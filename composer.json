@@ -1,0 +1,17 @@
+{
+    "name": "jheferson-br/tquery",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "":"src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jheferson Fonseca Gonçalves",
+            "email": "play_jheferson@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
