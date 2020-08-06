@@ -9,7 +9,7 @@ class TQuery
 {
     private $query_name;
     private $criteria;
-    private $base_path_querys;
+    private $base_path_querys = "app/querys/";
     private $query_separator;
     private $pdo;
     private $querys;
@@ -30,11 +30,11 @@ class TQuery
         $this->pdo = TTransaction::get();
         $this->obj_expected = $obj;
         $this->params = $params;
-        $this->base_path_querys = __DIR__.'/../../../../'."app/querys/";
+        //$this->base_path_querys = __DIR__.'/../../../../'."app/querys/";
     }
 
     public function setBasePathQuerys(string $base_path_querys){
-        $this->base_path_querys = __DIR__.'/../../../../'.$base_path_querys;
+        $this->base_path_querys = $base_path_querys;
     }
 
     public function setMultiQuerySeparator($separator = ";")
@@ -44,7 +44,7 @@ class TQuery
 
     private function buildQuery()
     {
-        $query = file_get_contents($this->base_path_query . $this->query_name);
+        $query = file_get_contents($this->base_path_querys . $this->query_name);
 
         if ($this->criteria) {
             $query = str_replace("{{WHERE}}", " WHERE " . $this->criteria->dump(), $query);
