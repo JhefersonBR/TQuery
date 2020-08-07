@@ -94,8 +94,8 @@ Imagine a necessidade de trazer um join complexo como este:
     `mes`.`men_aliquota`
 ```
 
-Note que nas condições da query existe um minemonico denominado **{{WHERE}} **.
-Este minemonico é padrão no **TQuery** e seu objetivo é definir o local onde será incluido as condições **WHERE** da consulta.
+Note que nas condições da query existe um mnemônico denominado **{{WHERE}} **.
+Este mnemônico é padrão no **TQuery** e seu objetivo é definir o local onde será incluido as condições **WHERE** da consulta.
 
 Veja como ficaria o codigo em php:
 
@@ -117,7 +117,7 @@ print_r($rows);
 ```
 Note que a **TQuery** se comporta de forma semelhante a **TRepository**
 
-Tambem é possível passar parâmetros para as querys usando mineomonicos customizados.
+Tambem é possível passar parâmetros para as querys usando mnemônicos customizados.
 Isso pode ser útil quando queremos enviar um trecho de código SQL para o TQuery incluir na query.
 
 Veja:
@@ -168,7 +168,7 @@ SELECT
     `men_aliquota` 
 ```
 
-Note que a query em questão, possui varios mineomonicos customizados como **{{poa_cod}}** e **{{cnpj}}**
+Note que a query em questão, possui varios mnemônicos customizados como **{{poa_cod}}** e **{{cnpj}}**
 Para enviar para a TQuery os dados para seu mineomonico customizado, basta enviar como segundo parametro no construtor do objeto, um array associativo com as chaves mantendo o mesmo nome do mineomonico.
 
 Veja um exemplo para a execução da query anterior:
@@ -180,7 +180,7 @@ TTransaction::open('ERP');
 $criteria = new TCriteria();
 $criteria->add(new TFilter('men_mesano', 'LIKE', "%" . date('Y')));
 
-//Defininto vetor com mineomonicos customizados
+//Defininto vetor com mnemônicos customizados
 $params = [
 	"mes_ano"=> $mes_ano,
 	"cnpj"=> $PA->cnpj,
@@ -197,7 +197,7 @@ $rows = $sql->load($criteria);
 //Imprimindo na tela os resultados da consulta.
 print_r($rows);
 ```
-Tambem é possível setar os valores dos mineomonicos atraves do método **setParams** quer recebe como parâmetro o vetor com os valores.
+Tambem é possível setar os valores dos mnemônicos atraves do método **setParams** quer recebe como parâmetro o vetor com os valores.
 Veja como ficaria:
 ```php
 $sql->setParams($params);
