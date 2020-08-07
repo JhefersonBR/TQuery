@@ -94,7 +94,7 @@ Imagine a necessidade de trazer um join complexo como este:
     `mes`.`men_aliquota`
 ```
 
-Note que nas condições da query existe um mnemônico denominado **{{WHERE}} **.
+Note que nas condições da query existe um mnemônico denominado **{{WHERE}}**.
 Este mnemônico é padrão no **TQuery** e seu objetivo é definir o local onde será incluido as condições **WHERE** da consulta.
 
 Veja como ficaria o codigo em php:
