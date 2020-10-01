@@ -60,7 +60,7 @@ class TQuery
         if (!empty($this->query_separator)) {
             $this->querys = explode($this->query_separator, $query);
         } else {
-            $this->query = $query;
+            $this->querys = $query;
         }
     }
 
@@ -71,11 +71,18 @@ class TQuery
             $this->buildQuery();
 
             $totalRows = 0;
-            foreach ($this->querys as $key => $query) {
-                if (!empty(trim($query))) {
-                    TTransaction::log($query);
-                    $totalRows += $this->pdo->exec($query);
+            
+            if (is_array($this->querys)){
+                foreach ($this->querys as $key => $query) {
+                    if (!empty(trim($query))) {
+                        TTransaction::log($query);
+                        $totalRows += $this->pdo->exec($query);
+                    }
                 }
+            }
+            else{
+                TTransaction::log($query);
+                $totalRows += $this->pdo->exec($this->querys);
             }
             return $totalRows;
         } catch (Exception $e) {
