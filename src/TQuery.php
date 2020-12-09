@@ -60,7 +60,7 @@ class TQuery
         if (!empty($this->query_separator)) {
             $this->querys = explode($this->query_separator, $query);
         } else {
-            $this->querys = $query;
+            $this->query = $query;
         }
     }
 
